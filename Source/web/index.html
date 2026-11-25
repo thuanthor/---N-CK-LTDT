@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShipperColor C++ — Thuật toán Tô màu Đồ thị Welsh-Powell (HCMUE)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div>
+        <h1>🚚 ShipperColor — Minh họa Thuật toán Tô màu Đồ thị (Welsh–Powell)</h1>
+        <p>Đỉnh = Đơn hàng &bull; Cạnh = Hai đơn xung đột &bull; Mỗi Màu = 1 Xe (Shipper) &bull; Mã nguồn C++ (Ma trận kề + Liên thông + Welsh–Powell)</p>
+      </div>
+      <span class="badge-cpp">Học phần: Lý thuyết Đồ thị &amp; Ứng dụng</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Thanh 5 nút chức năng tuần tự -->
+    <section class="toolbar card">
+      <div class="toolbar-group">
+        <label for="datasetSelect">Dữ liệu:</label>
+        <select id="datasetSelect"></select>
+
+        <label class="btn btn-outline" for="csvFileInput">📂 1. Tải file CSV</label>
+        <input type="file" id="csvFileInput" accept=".csv" hidden />
+      </div>
+
+      <div class="toolbar-group">
+        <label for="capInput">Tải tối đa/xe (kg):</label>
+        <input type="number" id="capInput" value="25" min="0" max="500" class="num-input" />
+      </div>
+
+      <div class="toolbar-actions">
+        <button id="btnBuildGraph" class="btn btn-blue">🕸️ 2. Dựng Đồ thị</button>
+        <button id="btnRunColor" class="btn btn-green">🎨 3. Tô màu (Welsh–Powell)</button>
+        <button id="btnStepMode" class="btn btn-purple">⏯️ 4. Chạy từng bước</button>
+        <button id="btnExportCsv" class="btn btn-red">📥 5. Xuất Excel (.csv)</button>
+      </div>
+    </section>
+
+    <!-- Khung vẽ chính -->
+    <section class="canvas-card card">
+      <div class="canvas-header">
+        <span id="statusBanner" class="status-text">Đã nạp dữ liệu từ C++ (web/du_lieu.js).</span>
+        <div class="view-switch">
+          <button id="btnViewGraph" class="tab-pill active">Đồ thị Xung đột</button>
+          <button id="btnViewMap" class="tab-pill">Bản đồ Lộ trình từ Kho</button>
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="graphCanvas" width="1060" height="420"></canvas>
+        <div id="hoverTooltip" class="tooltip" hidden></div>
+      </div>
+
+      <div id="stepBar" class="step-bar" hidden>
+        <button id="btnPrevStep" class="btn btn-small">◀ Bước trước</button>
+        <span id="stepCounter" class="step-counter">Bước 0 / 0</span>
+        <button id="btnNextStep" class="btn btn-blue btn-small">Bước tiếp (NEXT) ▶</button>
+        <button id="btnAutoPlay" class="btn btn-green btn-small">▶ Tự chạy</button>
+        <span id="stepExplain" class="step-explain">Nhấn "Bước tiếp" để xem thuật toán Welsh–Powell tô màu.</span>
+      </div>
+    </section>
+
+    <!-- 3 khung kết quả bên dưới bám sát lý thuyết đã học -->
+    <section class="bottom-grid">
+      <div class="card panel">
+        <h2 class="panel-title warn">⚠️ Xung đột phát hiện (<span id="edgeCountLabel">0</span> cạnh)</h2>
+        <div id="conflictList" class="scroll-box empty-hint"></div>
+      </div>
+
+      <div class="card panel">
+        <h2 class="panel-title ok">📊 Thông tin Đồ thị &amp; Kết quả Tô màu</h2>
+        <div id="summaryBox" class="scroll-box"></div>
+      </div>
+
+      <div class="card panel">
+        <h2 class="panel-title info">🚚 Phân bổ Xe &amp; Quãng đường</h2>
+        <div id="vehicleList" class="scroll-box empty-hint"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="du_lieu.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

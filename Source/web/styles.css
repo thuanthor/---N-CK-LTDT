@@ -1,0 +1,345 @@
+/* ============================================================================
+   FILE: web/styles.css
+   MÔ TẢ: Giao diện sáng, gọn trong 1 màn hình, dễ nhìn khi thuyết trình & quay video
+   ============================================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.45;
+}
+
+.topbar {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+}
+
+.topbar-inner {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.topbar h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.topbar p {
+  font-size: 0.85rem;
+  opacity: 0.92;
+  margin-top: 2px;
+}
+
+.badge-cpp {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 14px auto;
+  padding: 0 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05);
+}
+
+/* Thanh công cụ 5 nút */
+.toolbar {
+  padding: 10px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.toolbar-group,
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toolbar label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+select,
+.num-input {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.num-input {
+  width: 68px;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 13px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.1s;
+  color: #ffffff !important;
+}
+
+.btn:hover {
+  filter: brightness(0.94);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-outline {
+  background: #475569;
+}
+
+.btn-blue {
+  background: #2563eb;
+}
+
+.btn-green {
+  background: #16a34a;
+}
+
+.btn-purple {
+  background: #7c3aed;
+}
+
+.btn-red {
+  background: #ea580c;
+}
+
+.btn-small {
+  padding: 5px 11px;
+  font-size: 0.82rem;
+  background: #64748b;
+}
+
+/* Khung vẽ Canvas */
+.canvas-card {
+  padding: 10px 14px;
+}
+
+.canvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.status-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.view-switch {
+  display: flex;
+  gap: 4px;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.tab-pill {
+  border: none;
+  background: transparent;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+}
+
+.tab-pill.active {
+  background: #ffffff;
+  color: #1d4ed8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.canvas-wrap {
+  position: relative;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fafcff;
+  overflow: hidden;
+}
+
+#graphCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(15, 23, 42, 0.94);
+  color: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  max-width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Thanh chạy Step-by-Step */
+.step-bar {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.step-counter {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #1e3a8a;
+  min-width: 85px;
+}
+
+.step-explain {
+  font-size: 0.86rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* 3 khung kết quả phía dưới */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 960px) {
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-title {
+  font-size: 0.95rem;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.panel-title.warn { border-color: #f59e0b; color: #b45309; }
+.panel-title.ok   { border-color: #10b981; color: #047857; }
+.panel-title.info { border-color: #3b82f6; color: #1d4ed8; }
+
+.sub-note {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.scroll-box {
+  max-height: 230px;
+  overflow-y: auto;
+  font-size: 0.84rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.empty-hint {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.item-card {
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: #f8fafc;
+  border-left: 4px solid #cbd5e1;
+}
+
+.item-card.conflict {
+  background: #fffbeb;
+  border-left-color: #f59e0b;
+}
+
+.big-result {
+  padding: 10px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  text-align: center;
+}
+
+.big-number {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #059669;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+  font-size: 0.82rem;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid #e2e8f0;
+  padding: 5px 8px;
+  text-align: left;
+}
+
+.compare-table th {
+  background: #f1f5f9;
+}

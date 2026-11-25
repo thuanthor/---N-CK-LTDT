@@ -1,0 +1,20 @@
+﻿BANG TONG HOP PHAN BO XE (THUAT TOAN WELSH-POWELL)
+Xe,So don,Tong khoi luong (kg),Quang duong (km),Thu tu giao tu Kho
+Xe 1,2,20,11.83,"Kho -> DH05 -> DH02 -> Kho"
+Xe 2,3,22,22.38,"Kho -> DH06 -> DH04 -> DH07 -> Kho"
+Xe 3,2,22,37.40,"Kho -> DH08 -> DH10 -> Kho"
+Xe 4,2,20,20.46,"Kho -> DH01 -> DH09 -> Kho"
+Xe 5,1,9,6.08,"Kho -> DH03 -> Kho"
+
+DANH SACH DON HANG CHI TIET
+Ma don,Dia chi,Khung gio,Khoi luong (kg),Xe duoc phan bo
+DH01,"ĐH Sư Phạm CS1 - 280 An Dương Vương, Q.5",08:00 - 08:25,8,Xe 4
+DH02,"ĐH Khoa học Tự nhiên - Nguyễn Văn Cừ, Q.5",08:15 - 08:45,7,Xe 1
+DH03,"Chợ Bến Thành - Lê Lợi, Quận 1",08:00 - 08:25,9,Xe 5
+DH04,"Bưu điện Trung tâm TP - Công xã Paris, Q.1",08:20 - 08:50,6,Xe 2
+DH05,"ĐH Bách Khoa - 268 Lý Thường Kiệt, Q.10",08:05 - 08:30,13,Xe 1
+DH06,"ĐH Tôn Đức Thắng - Nguyễn Hữu Thọ, Q.7",08:05 - 08:30,9,Xe 2
+DH07,"Hồ Con Rùa - Võ Văn Tần, Quận 3",08:25 - 08:55,7,Xe 2
+DH08,"Sân bay Tân Sơn Nhất - Trường Sơn, Tân Bình",08:05 - 08:30,14,Xe 3
+DH09,"Landmark 81 - Điện Biên Phủ, Bình Thạnh",08:10 - 08:35,12,Xe 4
+DH10,"ĐH Ngân hàng - Hoàng Diệu 2, Thủ Đức",08:20 - 08:50,8,Xe 3
